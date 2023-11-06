@@ -14,7 +14,7 @@ while True:
     conn, addr = s.accept()
     print('Client address:', addr)
     data = conn.recv(BUFFER_SIZE)
-    cur_time = ' ' + " new server!!" + time.ctime(time.time()) + "\r\n"
+    cur_time = ' ' + " new server!!!" + time.ctime(time.time()) + "\r\n"
     print(data.decode('utf-8'))
     data = data + cur_time.encode('ascii')
     conn.send(data)
